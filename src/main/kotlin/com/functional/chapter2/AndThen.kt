@@ -1,5 +1,7 @@
 package com.functional.chapter2
 
-inline infix fun <I1, I2, O> ((I1)->I2).andThen(crossinline block: (I2) -> O): (I1) -> O = {
-    block(this(it))
+typealias FUN<A, B> = (A) -> B
+
+infix fun <A, B, C> FUN<A, B>.andThen(other: FUN<B, C>): FUN<A, C> = {
+    other(this(it))
 }
