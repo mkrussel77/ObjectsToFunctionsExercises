@@ -9,7 +9,7 @@ class EmailTemplateTest {
     private val uberto = Person("Uberto", "Barbini")
 
     private val templateText = """
-        Dear {person},
+        Dear {firstName},
         This is an email to you.
     """.trimIndent()
 

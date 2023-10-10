@@ -7,5 +7,5 @@ data class Person(val firstName: String, val lastName: String)
 
 class EmailTemplate(private val templateText: String) : (Person) -> String {
     override fun invoke(aPerson: Person): String =
-        renderTemplate(templateText, mapOf("person" tag aPerson.firstName))
+        renderTemplate(templateText, mapOf("firstName" tag aPerson.firstName))
 }
