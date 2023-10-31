@@ -14,9 +14,9 @@ data class InQuotes(override val jsonCompacted: String) : JsonCompactor() {
 }
 
 data class OutQuotes(override val jsonCompacted: String) : JsonCompactor() {
-    override fun compact(c: Char): JsonCompactor = when (c) {
-        ' ' -> this
-        '"' -> InQuotes(jsonCompacted + c)
+    override fun compact(c: Char): JsonCompactor = when {
+        c.isWhitespace() -> this
+        c == '"' -> InQuotes(jsonCompacted + c)
         else -> OutQuotes(jsonCompacted + c)
     }
 }
