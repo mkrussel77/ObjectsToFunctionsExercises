@@ -10,7 +10,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
     testImplementation("io.strikt:strikt-jvm:0.34.1")
     testImplementation("com.ubertob.pesticide:pesticide-core:1.6.6")
 }
