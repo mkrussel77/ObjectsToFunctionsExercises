@@ -1,8 +1,8 @@
 package com.functional.chapter6
 
+import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 import strikt.assertions.isEqualTo
-import kotlin.test.Test
 
 class ElevatorCommandTest {
     @Test

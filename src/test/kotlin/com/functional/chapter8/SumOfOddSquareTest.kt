@@ -1,9 +1,9 @@
 package com.functional.chapter8
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 import strikt.assertions.isEqualTo
-import kotlin.test.Ignore
 import kotlin.time.Duration
 import kotlin.time.measureTime
 
@@ -25,7 +25,7 @@ class SumOfOddSquareTest {
     }
 
     @Test
-    @Ignore // too slow, run manually when interested
+    @Disabled("too slow, run manually when interested")
     fun performanceTest() {
         // warmup
         repeat(500) {
